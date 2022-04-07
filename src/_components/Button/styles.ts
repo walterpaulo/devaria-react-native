@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     containerButton: {
         marginTop: height/20
     },
-    marginTop: {
+    button: {
         width: width/1.3,
         height: height/15,
         backgroundColor: colors.primaryColor,

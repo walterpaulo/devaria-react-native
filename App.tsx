@@ -3,21 +3,25 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import AppLoading from 'expo-app-loading';  
 import Button from './src/_components/Button';
+import Input from './src/_components/Input';
+import { useState } from 'react';
 
 export default function App() {
+  const [email, setEmail] = useState<string>()
  const [fontsLoaded] = useFonts({
-    'biennale-black': require('./assets/fonts/Biennale-black.otf')
+    'biennale-black': require('./src/_assets/fonts/Biennale-black.otf')
   });
 
   return (
     fontsLoaded?
       <View style={styles.container}>
-        <Button onPress={() => {}} placeholder="Clique no botão"/>
-        <Text style={{fontFamily: 'biennale-black' }}>Open up App.tsx to start working on your app!</Text>
+        {/* <Input onChangeText={(e: string) => {}} placeholder={"Digite seu email"} 
+        value={email}/> */}
+        <Button onPress={() => {}} placeholder="Clique no botão" loading={false} disabled={false} />
         <StatusBar style="auto" />
       </View> :
       <AppLoading />
-  );
+  )
 }
 
 const styles = StyleSheet.create({

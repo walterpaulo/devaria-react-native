@@ -4,12 +4,12 @@ import styles from "./styles"
 import { IButton } from "./types"
 
 const Button = (props: IButton) => {
-    return
-        <View>
+    return(
+        <View style={styles.containerButton}>
             <TouchableOpacity 
                 onPress={props.onPress}
                 disabled={props.disabled}
-                style={[props.style]}
+                style={props.disabled ? [styles.buttonDisabled, props.style, styles.buttonDisabled] : [styles.button]}
                 >
                 {props.loading ?
                     <ActivityIndicator size={30} color={colors.whiteColor} />
@@ -18,6 +18,6 @@ const Button = (props: IButton) => {
                 }
             </TouchableOpacity>
         </View>
-
+    )
 }
 export default Button
