@@ -5,16 +5,14 @@ import AppLoading from 'expo-app-loading';
 
 export default function App() {
  const [fontsLoaded] = useFonts({
-    Inter_900Black,
+    'biennale-black': require('./assets/fonts/Biennale-black.otf')
   });
 
   return (
     fontsLoaded?
       <View style={styles.container}>
-        <Text>Open up App.tsx to start working on your app!</Text>
+        <Text style={{fontFamily: 'biennale-black' }}>Open up App.tsx to start working on your app!</Text>
         <StatusBar style="auto" />
-      <AppLoading />
-
       </View> :
       <AppLoading />
   );
