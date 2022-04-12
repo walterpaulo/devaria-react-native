@@ -5,6 +5,7 @@ import AppLoading from 'expo-app-loading';
 import Button from './src/_components/Button';
 import Input from './src/_components/Input';
 import { useState } from 'react';
+import UploadImage from './src/_components/UploadImage';
 
 export default function App() {
   const [email, setEmail] = useState<string>()
@@ -17,6 +18,7 @@ export default function App() {
       <View style={styles.container}>
         {/* <Input onChangeText={(e: string) => {}} placeholder={"Digite seu email"} 
         value={email}/> */}
+        <UploadImage />
         <Button onPress={() => {}} placeholder="Clique no botão" loading={false} disabled={false} />
         <StatusBar style="auto" />
       </View> :
