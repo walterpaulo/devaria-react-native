@@ -3,11 +3,11 @@ import { StyleSheet } from 'react-native';
 
 const {height} = Dimensions.get('screen')
 
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
     containerAvatar: {
         marginBottom: height/35
     }
 
 })
 
-export default style
+export default styles

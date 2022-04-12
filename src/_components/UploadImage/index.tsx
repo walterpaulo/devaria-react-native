@@ -10,7 +10,7 @@ const UploadImage = () => {
     return (
         <View>
             <TouchableOpacity style={style.containerAvatar} onPress={pickImage}>
-                <Image source={require('../../_assets/image')}></Image>
+                <Image source={require('../../_assets/image/avatar2.png')}></Image>
             </TouchableOpacity>
         </View>
     )
