@@ -15,10 +15,10 @@ export default function App() {
 
   return (
     fontsLoaded?
-      <View style={styles.container}>
+    <View style={styles.container}>
+        <UploadImage />
         {/* <Input onChangeText={(e: string) => {}} placeholder={"Digite seu email"} 
         value={email}/> */}
-        <UploadImage />
         <Button onPress={() => {}} placeholder="Clique no botão" loading={false} disabled={false} />
         <StatusBar style="auto" />
       </View> :

@@ -1,10 +1,21 @@
-import { Image, Text, TouchableOpacity, View } from "react-native"
+import { Image, TouchableOpacity, View } from "react-native"
+import * as ImagePicker from 'expo-image-picker'
 import style from "./styles"
 
-const UploadImage = () => {
+const UploadImage = (props: {
+    setImage: (image: ImagePicker.ImagePickerResult) => void
+}) => {
 
-    const pickImage = () => {
-
+    const pickImage = async () => {
+       const result = await ImagePicker.launchImageLibraryAsync({
+           mediaTypes: ImagePicker.MediaTypeOptions.Images,
+           allowsEditing: true,
+           aspect: [4, 3],
+           quality: 1,
+       })
+       if(!result.cancelled){
+        props.setImage(result)
+       }
     }
 
     return (
